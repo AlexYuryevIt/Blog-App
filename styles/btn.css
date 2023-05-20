@@ -1,0 +1,20 @@
+.btn {
+  display: block;
+  width: 400px;
+  height: 50px;
+  border: 1px solid rgba(1, 1, 1, 0.3);
+  border-radius: 10px;
+  background-color: rgb(63, 105, 210);
+  color: #fff;
+  cursor: pointer;
+}
+
+.blog__btn {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+.blog__message-feed {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (max-width: 767px) {
+  .blog__message-feed {
+    width: 100%;
+  }
+}

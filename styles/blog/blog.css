@@ -1,0 +1,15 @@
+.blog {
+  padding: 100px 100px 0;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+@media (max-width: 767px) {
+  .blog {
+    padding: 50px 15px;
+    flex-direction: column;
+  }
+}

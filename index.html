@@ -6,12 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Блог о моем обучении</title>
     <link rel="stylesheet" href="./vendor/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/index.css" />
-    <script src="./js/index.js"></script>
   </head>
-  <body>
-    <header class="header"></header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
+  <body class="page">
+    <section class="blog">
+      <div class="js-background">
+        <div class="blog__message-feed js-feed">
+          <h1 class="title">Лента постов</h1>
+          <button class="btn new-post__btn js-new-post-btn">
+            Добавить пост
+          </button>
+          <ol>
+            <li>Привет</li>
+          </ol>
+        </div>
+      </div>
+      <div class="blog__input-list js-input-list">
+        <h2 class="title title_color">Новый пост</h2>
+        <form action="" class="blog__form">
+          <input
+            class="blog__input js-input"
+            type="text"
+            placeholder="Введите заголовок"
+            maxlength="100"
+          />
+          <textarea
+            class="blog__input blog__input_textarea js-story-area"
+            name="story"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Введите текст"
+            spellcheck="true"
+            maxlength="200"
+          ></textarea>
+          <button class="blog__btn btn js-btn" type="submit">
+            Опубликовать пост
+          </button>
+        </form>
+      </div>
+    </section>
+    <script src="./js/index.js"></script>
   </body>
 </html>

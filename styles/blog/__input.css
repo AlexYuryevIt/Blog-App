@@ -1,0 +1,37 @@
+.blog__input {
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(63, 105, 210);
+  outline: none;
+  height: 50px;
+  font-size: 16px;
+  color: #333333ac;
+  box-sizing: border-box;
+}
+
+.blog__input:placeholder {
+  font-size: 24px;
+  color: #333;
+}
+
+.blog__input_textarea {
+  padding: 10px;
+  height: 100px;
+  resize: none;
+}
+
+.pulse-warning {
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+}

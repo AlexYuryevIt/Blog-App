@@ -1,0 +1,14 @@
+/* Сброс стандартных стилей браузера */
+@import url(../vendor/reset.css);
+/* Общие стили для проекта */
+@import url(../styles/page.css);
+@import url(../styles/title.css);
+/* Секция блога с полями ввода и кнопкой опубликовать */
+@import url(../styles/blog/blog.css);
+@import url(../styles/blog/__form.css);
+@import url(../styles/blog/__input-list.css);
+@import url(../styles/blog/__message-feed.css);
+@import url(../styles/blog/__input.css);
+
+/* Кнопка создания нового поста */
+@import url(../styles/btn.css);
