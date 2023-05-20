@@ -21,17 +21,24 @@
 }
 
 .pulse-warning {
-  animation: pulse 2s ease infinite;
+  animation: pulse 1s ease-in-out;
 }
 
 @keyframes pulse {
   0% {
     transform: scale(1);
-    opacity: 1;
   }
 
+  25% {
+    transform: scale(1.005);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  75% {
+    transform: scale(1.015);
+  }
   100% {
     transform: scale(1.02);
-    opacity: 1;
   }
 }

@@ -5,13 +5,26 @@
   gap: 30px;
   visibility: hidden;
   scale: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 1000;
 }
 
 .blog__input-list_active {
+  display: flex;
   visibility: visible;
   scale: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -100;
+  background-color: rgba(0, 0, 0, 0.7);
+  filter: blur(3px);
+  transition: 0.2s ease-in-out;
 }
 
 @media (max-width: 767px) {
@@ -23,15 +36,10 @@
     left: 0;
     height: 50vh;
   }
-  .background_active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    filter: blur(3px);
-    z-index: 900;
+  .overlay_active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 9;
   }
   .blog__input-list_active {
     visibility: visible;

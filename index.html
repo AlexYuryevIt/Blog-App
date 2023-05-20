@@ -16,16 +16,10 @@
   </head>
   <body class="page">
     <section class="blog">
-      <div class="js-background">
-        <div class="blog__message-feed js-feed">
-          <h1 class="title">Лента постов</h1>
-          <button class="btn new-post__btn js-new-post-btn">
-            Добавить пост
-          </button>
-          <ol>
-            <li>Привет</li>
-          </ol>
-        </div>
+      <div class="blog__message-feed">
+        <h1 class="title">Лента постов</h1>
+        <button class="btn new-post__btn js-new-post-btn">Добавить пост</button>
+        <ol class="blog__list js-feed"></ol>
       </div>
       <div class="blog__input-list js-input-list">
         <h2 class="title title_color">Новый пост</h2>
@@ -51,6 +45,7 @@
           </button>
         </form>
       </div>
+      <div class="overlay js-background"></div>
     </section>
     <script src="./js/index.js"></script>
   </body>

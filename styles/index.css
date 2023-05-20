@@ -9,6 +9,7 @@
 @import url(../styles/blog/__input-list.css);
 @import url(../styles/blog/__message-feed.css);
 @import url(../styles/blog/__input.css);
+@import url(../styles/blog/__item.css);
 
 /* Кнопка создания нового поста */
 @import url(../styles/btn.css);

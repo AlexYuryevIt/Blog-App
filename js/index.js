@@ -13,20 +13,45 @@ const feedNode = document.querySelector(".js-feed");
 //Бэкграунд для полей ввода (добавляется класс .background_active)
 const backgroundNode = document.querySelector(".js-background");
 
+const storyFeed = [];
+
 //--------------------------------------Функции-----------------------------------------
-const inputOpener = () => {
+const inputToggler = () => {
   backgroundNode.classList.toggle("background_active");
   inputList.classList.toggle("blog__input-list_active");
 };
 
-const getTitle = () => inputTitleNode.value;
-const getStory = () => inputStoryNode.value;
+const getTitle = () => {
+  return inputTitleNode.value;
+};
+const getStory = () => {
+  return inputStoryNode.value;
+};
 
 const clearTitleInput = () => {
   inputTitleNode.value = "";
 };
 const clearStoryInput = () => {
   inputStoryNode.value = "";
+};
+
+const renderStory = (storyFeed) => {
+  feedNode.innerHTML = "";
+  storyFeed.forEach((newStory) => {
+    const feedItem = document.createElement("li");
+    const feedTitle = document.createElement("h2");
+    const feedStory = document.createElement("p");
+    feedItem.className = "blog__item";
+    feedTitle.className = "blog__item-title";
+    feedStory.className = "blog__item_story";
+    feedItem.innerText = "";
+    feedTitle.innerText = newStory.title;
+    feedStory.innerText = newStory.story;
+
+    feedNode.appendChild(feedItem);
+    feedItem.appendChild(feedTitle);
+    feedItem.appendChild(feedStory);
+  });
 };
 
 const addButtonHandler = (e) => {
@@ -38,19 +63,24 @@ const addButtonHandler = (e) => {
   } else if (!inputStoryNode.value) {
     inputStoryNode.classList.toggle("pulse-warning");
     return;
+  } else {
+    inputStoryNode.classList.toggle("pulse-warning");
   }
 
-  getTitle();
-  getStory();
-  inputOpener();
+  const storyTitle = getTitle();
+  const storyText = getStory();
 
-  console.log(getTitle());
-  console.log(getStory());
   clearTitleInput();
   clearStoryInput();
+
+  const newStory = { title: storyTitle, story: storyText };
+  storyFeed.push(newStory);
+
+  renderStory(storyFeed);
+  inputToggler();
 };
 
 //--------------------------------------Обработчики--------------------------------------
-newPostBtnNode.addEventListener("click", inputOpener);
+newPostBtnNode.addEventListener("click", inputToggler);
 
 btnNode.addEventListener("click", addButtonHandler);
