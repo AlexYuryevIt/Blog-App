@@ -24,6 +24,8 @@ const backgroundNode = document.querySelector(".js-background");
 const storyFeed = [];
 let date = new Date();
 
+// window.localStorage.setItem("story");
+
 //--------------------------------------Функции-----------------------------------------
 const init = () => {
   titleCounter.textContent = TITLE_CHAR_LIMIT;
@@ -51,7 +53,7 @@ const clearStoryInput = () => {
   inputStoryNode.value = "";
 };
 
-const renderStory = (storyFeed, currentDate) => {
+const renderStory = (storyFeed) => {
   feedNode.innerHTML = "";
   storyFeed.forEach((newStory) => {
     const feedItem = document.createElement("li");
@@ -98,6 +100,11 @@ const storyCharCounter = () => {
   }
 };
 
+const resetCharCounter = () => {
+  titleCounter.textContent = TITLE_CHAR_LIMIT;
+  storyCounter.textContent = STORY_CHAR_LIMIT;
+};
+
 const addButtonHandler = (e) => {
   e.preventDefault();
 
@@ -122,6 +129,7 @@ const addButtonHandler = (e) => {
 
   renderStory(storyFeed);
   inputToggler();
+  resetCharCounter();
 };
 
 //--------------------------------------Обработчики--------------------------------------

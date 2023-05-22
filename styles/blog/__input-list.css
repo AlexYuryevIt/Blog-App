@@ -26,6 +26,7 @@
   background-color: rgba(0, 0, 0, 0.8);
   transition: 0.2s ease-in-out;
   backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 @media (max-width: 767px) {
