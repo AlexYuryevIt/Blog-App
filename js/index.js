@@ -24,8 +24,6 @@ const backgroundNode = document.querySelector(".js-background");
 const storyFeed = [];
 let date = new Date();
 
-// window.localStorage.setItem("story");
-
 //--------------------------------------Функции-----------------------------------------
 const init = () => {
   titleCounter.textContent = TITLE_CHAR_LIMIT;
@@ -126,6 +124,7 @@ const addButtonHandler = (e) => {
 
   const newStory = { title: storyTitle, story: storyText };
   storyFeed.push(newStory);
+  localStorage.setItem("storyFeed", JSON.stringify(storyFeed));
 
   renderStory(storyFeed);
   inputToggler();
@@ -140,5 +139,3 @@ btnNode.addEventListener("click", addButtonHandler);
 inputTitleNode.addEventListener("input", titleCharCounter);
 
 inputStoryNode.addEventListener("input", storyCharCounter);
-
-console.log(window.localStorage);
