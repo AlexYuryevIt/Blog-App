@@ -1,5 +1,6 @@
 .title {
   text-align: left;
   font-size: 24px;
-  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
 }
