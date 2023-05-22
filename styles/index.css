@@ -2,9 +2,12 @@
 @import url(../vendor/reset.css);
 /* Общие стили для проекта */
 @import url(../styles/page.css);
+@import url(../styles/сontainer.css);
 @import url(../styles/title.css);
 /* Секция блога с полями ввода и кнопкой опубликовать */
 @import url(../styles/blog/blog.css);
+@import url(../styles/blog/__inner.css);
+@import url(../styles/blog/__form-wrapper.css);
 @import url(../styles/blog/__form.css);
 @import url(../styles/blog/__input-list.css);
 @import url(../styles/blog/__message-feed.css);

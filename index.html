@@ -9,43 +9,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body class="page">
     <section class="blog">
-      <div class="blog__message-feed">
-        <h1 class="title">Лента постов</h1>
-        <button class="btn new-post__btn js-new-post-btn">Добавить пост</button>
-        <ol class="blog__list js-feed"></ol>
+      <div class="container">
+        <div class="blog__inner">
+          <div class="blog__message-feed">
+            <h1 class="title">Лента постов</h1>
+            <button class="btn new-post__btn js-new-post-btn">
+              Добавить пост
+            </button>
+            <ol class="blog__list js-feed"></ol>
+          </div>
+          <div class="blog__input-list js-input-list">
+            <h2 class="title title_color">Новый пост</h2>
+            <div class="blog__form-wrapper">
+              <form action="" class="blog__form">
+                <input
+                  class="blog__input js-input"
+                  type="text"
+                  placeholder="Введите заголовок"
+                  maxlength="50"
+                />
+                <label class="counter">
+                  Осталось <span id="titleCounter"></span> символов
+                </label>
+              </form>
+              <form class="blog__form">
+                <textarea
+                  class="blog__input blog__input_textarea js-story-area"
+                  name="story"
+                  id="textarea"
+                  cols="30"
+                  rows="10"
+                  placeholder="Введите текст"
+                  spellcheck="true"
+                  maxlength="200"
+                ></textarea>
+                <label class="counter">
+                  Осталось <span id="storyCounter"></span> символов
+                </label>
+              </form>
+              <button class="blog__btn btn js-btn" type="submit">
+                Опубликовать пост
+              </button>
+            </div>
+          </div>
+          <div class="overlay js-background"></div>
+        </div>
       </div>
-      <div class="blog__input-list js-input-list">
-        <h2 class="title title_color">Новый пост</h2>
-        <form action="" class="blog__form">
-          <input
-            class="blog__input js-input"
-            type="text"
-            placeholder="Введите заголовок"
-            maxlength="100"
-          />
-          <textarea
-            class="blog__input blog__input_textarea js-story-area"
-            name="story"
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Введите текст"
-            spellcheck="true"
-            maxlength="200"
-          ></textarea>
-          <button class="blog__btn btn js-btn" type="submit">
-            Опубликовать пост
-          </button>
-        </form>
-      </div>
-      <div class="overlay js-background"></div>
     </section>
     <script src="./js/index.js"></script>
   </body>

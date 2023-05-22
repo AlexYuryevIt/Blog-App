@@ -6,15 +6,27 @@
 }
 
 .blog__item {
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+  border: 1px solid #3f69d2;
+  border-left: none;
+  border-right: none;
+  border-radius: 10px;
 }
 
 .blog__item-title {
   width: 100%;
+  word-wrap: break-word;
+}
+
+.blog__item-date {
+  text-align: right;
 }
 
 .blog__item_story {
+  word-wrap: break-word;
   font-size: 16px;
+  font-weight: 300;
 }

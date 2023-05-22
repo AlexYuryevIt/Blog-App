@@ -16,12 +16,19 @@
 
 .blog__input_textarea {
   padding: 10px;
-  height: 100px;
+  height: 150px;
+  width: 100%;
   resize: none;
 }
 
 .pulse-warning {
   animation: pulse 1s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .counter {
+    color: #fff;
+  }
 }
 
 @keyframes pulse {

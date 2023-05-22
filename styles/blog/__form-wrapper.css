@@ -1,0 +1,5 @@
+.blog__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
