@@ -10,6 +10,7 @@ const inputStoryNode = document.querySelector(".js-story-area");
 //Кнопки
 const newPostBtnNode = document.querySelector(".js-new-post-btn");
 const btnNode = document.querySelector(".js-btn");
+const closeBtn = document.querySelector(".js-close-btn");
 
 //Счетчики
 const titleCounter = document.getElementById("titleCounter");
@@ -49,6 +50,13 @@ const clearTitleInput = () => {
 };
 const clearStoryInput = () => {
   inputStoryNode.value = "";
+};
+
+const revertChanges = () => {
+  clearTitleInput();
+  clearStoryInput();
+  inputToggler();
+  resetCharCounter();
 };
 
 const renderStory = (storyFeed) => {
@@ -124,7 +132,6 @@ const addButtonHandler = (e) => {
 
   const newStory = { title: storyTitle, story: storyText };
   storyFeed.push(newStory);
-  localStorage.setItem("storyFeed", JSON.stringify(storyFeed));
 
   renderStory(storyFeed);
   inputToggler();
@@ -139,3 +146,5 @@ btnNode.addEventListener("click", addButtonHandler);
 inputTitleNode.addEventListener("input", titleCharCounter);
 
 inputStoryNode.addEventListener("input", storyCharCounter);
+
+closeBtn.addEventListener("click", revertChanges);

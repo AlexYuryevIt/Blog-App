@@ -15,6 +15,29 @@
   scale: 1;
 }
 
+.input__list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 20px;
+  width: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 36px;
+  color: #3f69d2;
+  cursor: pointer;
+  text-align: center;
+}
+
 .overlay {
   position: fixed;
   top: 0;
