@@ -92,32 +92,42 @@ const titleCharCounter = () => {
   const counter = TITLE_CHAR_LIMIT - inputTitleNode.value.length;
   titleCounter.textContent = counter;
 
-  if (counter <= 0) {
-    inputTitleNode.value = inputTitleNode.value.substring(0, TITLE_CHAR_LIMIT);
-  }
+  if (counter < 0) {
+    titleCounter.style.color = "red";
+  } else titleCounter.style.color = "white";
 };
 
 const storyCharCounter = () => {
   const counter = STORY_CHAR_LIMIT - inputStoryNode.value.length;
   storyCounter.textContent = counter;
 
-  if (counter <= 0) {
-    inputStoryNode.value = inputStoryNode.value.substring(0, STORY_CHAR_LIMIT);
-  }
+  if (counter < 0) {
+    storyCounter.style.color = "red";
+  } else storyCounter.style.color = "white";
 };
 
 const resetCharCounter = () => {
   titleCounter.textContent = TITLE_CHAR_LIMIT;
   storyCounter.textContent = STORY_CHAR_LIMIT;
+  titleCounter.style.color = "white";
+  storyCounter.style.color = "white";
 };
 
 const addButtonHandler = (e) => {
   e.preventDefault();
 
-  if (!inputTitleNode.value) {
+  if (
+    !inputTitleNode.value ||
+    inputTitleNode.value.length === 0 ||
+    inputTitleNode.value.length > TITLE_CHAR_LIMIT
+  ) {
     inputTitleNode.classList.toggle("pulse-warning");
     return;
-  } else if (!inputStoryNode.value) {
+  } else if (
+    !inputStoryNode.value ||
+    inputStoryNode.value.length === 0 ||
+    inputStoryNode.value.length > STORY_CHAR_LIMIT
+  ) {
     inputStoryNode.classList.toggle("pulse-warning");
     return;
   } else {
